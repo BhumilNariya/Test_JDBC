@@ -1,0 +1,66 @@
+Class.forName("com.mysql.jdbc.Driver");  ----Load driver
+Connection connection =DriverManager.getConnection(URL ,user , password); ---Established Connection
+Statement statement= connection.createStatement();    ----------Statement create
+ResultSet rs= statement.executeQuery(enter Query);    -------------Execute the Query
+
+executeQuery();  ---retrive data from databses
+executeUpdate();  ---updata table of databses
+
+------------------------------------------------Databse Query---------------------------------------------------
+show bhumil;                                                   ---databse name =bhumil
+create database bhumil;                                       ---table name =employess
+use bhumil;
+select * from emplouess;
+describe employess;
+insert into employess(id ,name, job_field , salary) values( 1 , 'bhumil' , 'Information Technology' , 1000000000);
+delete  from  employess where id=3;
+
+UPDATE employess
+SET job_title='Full Stack Developer' , salary= 80000
+WHERE id=2;
+
+
+
+import java.util.sql.*;
+
+public class Main{
+
+public static void main(String args[]){
+  String URL="jdbc:mysql://localhost:3306/bhumil";
+  String user="root";
+  String password="Password@123";
+  String query = "select * form employess";
+
+Class.forName("com.msql.jdbc.driver");
+Connection connection=DriverManager.getConnection(URL,user,password);
+Statement statement = connection.createStatment();
+ResultSet rs=statement.executeQuery(select * from bhumil);
+whiel(rs.next()){
+            int id= rs.getInt("id");
+            String name = rs.getString("name");
+            String job_title = rs.getString("job_title");
+            double salary = rs.getdouble("salary");
+
+            Systme.out.println(" ");
+            System.out.println("======");
+            System.out.println("ID :" + id);
+            Systme.out.println("Name :" +name);
+            System.out.println("job_title :" +job_title);
+            System.out.println("salary: " + salary):
+            }
+            rs.close();
+            rs.statement();
+            rs.connection();
+            System.out.println("Connection closed");
+
+
+}
+
+}
+
+
+
+
+
+
+
