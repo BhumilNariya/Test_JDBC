@@ -4,7 +4,7 @@ Statement statement= connection.createStatement();    ----------Statement create
 ResultSet rs= statement.executeQuery(enter Query);    -------------Execute the Query
 
 executeQuery();  ---retrive data from databses
-executeUpdate();  ---updata table of databses
+executeUpdate();  ---update table of databses
 
 ------------------------------------------------Databse Query---------------------------------------------------
 show bhumil;                                                   ---databse name =bhumil
